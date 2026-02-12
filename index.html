@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShieldLogic | System Boot</title>
+    <style>
+        body { background: #000; color: #00ff41; font-family: monospace; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; overflow: hidden; }
+        .boot-sequence { border-left: 2px solid #00ff41; padding-left: 20px; }
+        .line { margin-bottom: 5px; opacity: 0; animation: fadeIn 0.1s forwards; }
+        @keyframes fadeIn { to { opacity: 1; } }
+    </style>
+</head>
+<body>
+    <div class="boot-sequence" id="boot">
+        <div class="line" style="animation-delay: 0.2s;">> SHIELDLOGIC_V2.0.26_INITIALIZED...</div>
+        <div class="line" style="animation-delay: 0.5s;">> LOADING_PERIMETER_PROTOCOLS... [OK]</div>
+        <div class="line" style="animation-delay: 0.8s;">> ESTABLISHING_NEURAL_LINK... [OK]</div>
+        <div class="line" style="animation-delay: 1.1s;">> REDIRECTING_TO_PRIMARY_NODE...</div>
+    </div>
+
+    <script>
+        // After 2 seconds, redirect to your Sentinel subdomain
+        setTimeout(() => {
+            window.location.href = "https://sentinel.kennethlaroche.tech";
+        }, 2200);
+    </script>
+</body>
+</html>
